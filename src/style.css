@@ -2,8 +2,58 @@
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 97%;
   background-color: white;
   color: black;
   font-family: Verdana;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top_stack {
+  display: flex;
+  justify-content: center;
+}
+
+.center_bar {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.title_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 32px;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.left_bar, .right_bar {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+
+.bottom_stack {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
 }
