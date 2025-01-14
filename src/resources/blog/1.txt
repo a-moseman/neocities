@@ -1,5 +1,5 @@
-The title.
-1 January 1970
+A fresh project.
+13 Janurary 2025
 
-	Here is some sample text. The purpose is of this is to test the "blog" functionality. Blah blah blah.
-
+Today is the day I finally got around to starting this website. It isn't particularly interesting at the moment, but that will come with time. For now, I've at least made it a central hub for my various other profiles across the Internet. Eventually, I'll likely add a page for any photography I do. A page for my projects might be nice, but I feel my portfolio website already does that job. Then again, it's for programming projects. Anyway, I'll try to post here somewhat often.
+	-Andrew
