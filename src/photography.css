@@ -1,0 +1,31 @@
+.top {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.catalog {
+    display: flex;
+    background: #603920;
+    border: none;
+    border-radius: 24px;
+}
+
+.photo {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    margin: 16px;
+    padding: 4px;
+    border: dotted;
+    background: #F0F0F0;
+}
+
+.photo_desc {
+    font-style: italic;
+}
