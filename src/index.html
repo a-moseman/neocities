@@ -87,9 +87,12 @@
             post.appendChild(postDate);
 
             for (let j = 2; j < postLines.length; j++) {
+              let paragraphText = postLines[j];
+              if (paragraphText === "") {
+                continue;
+              }
               const postParagraph = document.createElement("p");
               postParagraph.className = "blog_post_paragraph";
-              let paragraphText = postLines[j];
               paragraphText = "&emsp;" + paragraphText; // start each paragraph with a tab
               postParagraph.innerText = paragraphText;
               post.appendChild(postParagraph);
