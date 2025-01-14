@@ -27,7 +27,7 @@
         <div class="center_bar">
           <div class="title_section">
             <div class="title">Andrew Moseman</div>
-            <div class="description"><i>A Computer Science graduate student.</i></div>
+            <div class="description"></div>
           </div>
 
 
@@ -51,10 +51,6 @@
 </html>
 
 <script>
-  function setText(element, text) {
-    element.textContent = text;
-  }
-
   // DOM elements
   const description = document.querySelector(".description");
 
@@ -63,6 +59,8 @@
     .then(text => {
       const descriptions = text.split("\n");
       const choice = Math.floor(Math.random() * descriptions.length);
-      setText(description, descriptions[choice]);
+      const chosen = document.createElement("i");
+      chosen.innerText = descriptions[choice];
+      description.appendChild(chosen);
     });
 </script>
