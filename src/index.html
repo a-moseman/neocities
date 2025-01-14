@@ -81,8 +81,8 @@
             const postDate = document.createElement("div");
             postTitle.className = "blog_post_title";
             postDate.className = "blog_post_date";
-            postTitle.textContent = postLines[0];
-            postDate.textContent = postLines[1];
+            postTitle.innerText = postLines[0];
+            postDate.innerText = postLines[1];
             post.appendChild(postTitle);
             post.appendChild(postDate);
 
@@ -91,8 +91,7 @@
               postParagraph.className = "blog_post_paragraph";
               let paragraphText = postLines[j];
               paragraphText = "&emsp;" + paragraphText; // start each paragraph with a tab
-              paragraphText = paragraphText.replace("\t", "&emsp;") // fix tabs
-              postParagraph.textContent = paragraphText;
+              postParagraph.innerText = paragraphText;
               post.appendChild(postParagraph);
             }
 
