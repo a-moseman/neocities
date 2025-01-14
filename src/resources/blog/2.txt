@@ -1,0 +1,6 @@
+Photography.
+14 January 2025
+The website is coming along nicely. I've got a photography page now. With some random rotation applied to each of the photos, I think it looks decent. It'll need a better color scheme, but I'll figure that out eventually. Frankly, I'm not sure where to go next with my website. A chatroom would be really cool, but moderating it would take time I lack.
+If there is one thing this website needs, it is better ways of visualizing "sections." Using borders via CSS is alright, but I think I ought to draw some stuff up instead--maybe some pixel art. The same can be said for the font. Helvetica is a good font, but too safe and boring for my tastes. Of course, the font I choose still needs to be easy to read.
+I also got a script up for testing the website. Initially, it was fine without. But, once I started accessing files such as these blogs, it became necessary. It wasn't hard--just a bash script calling node--so now I'm no longer spamming Neocities with updates.
+-Andrew

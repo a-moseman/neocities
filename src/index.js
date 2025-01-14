@@ -33,7 +33,7 @@ fetchWithFallback("https://a-moseman.neocities.org/resources/blog/index.txt", ".
 
     blogCounter.textContent = `total posts: ${posts}`;
 
-    for (let i = 1; i <= posts; i++) {
+    for (let i = posts; i >= 1; i--) {
     fetchWithFallback(`https://a-moseman.neocities.org/resources/blog/${i}.txt`, `./resources/blog/${i}.txt`)
         .then(postFile => postFile.text())
         .then(postText => {

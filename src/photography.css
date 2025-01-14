@@ -1,3 +1,8 @@
+body {
+    color: #FFE0F0;
+    background: #110023;
+}
+
 .top {
     display: flex;
     margin-bottom: 24px;
@@ -24,8 +29,10 @@
     padding: 4px;
     border: dotted;
     background: #F0F0F0;
+    border-color: darkgray;
 }
 
 .photo_desc {
     font-style: italic;
+    color: black;
 }
