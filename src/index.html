@@ -93,7 +93,7 @@
               }
               const postParagraph = document.createElement("div");
               postParagraph.className = "blog_post_paragraph";
-              paragraphText = " &emsp; " + paragraphText; // start each paragraph with a tab
+              paragraphText = "\u00A0\u00A0\u00A0\u00A0" + paragraphText; // start each paragraph with a tab
               postParagraph.textContent = paragraphText;
               post.appendChild(postParagraph);
             }
