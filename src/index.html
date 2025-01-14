@@ -60,7 +60,7 @@
 
   async function loadDescriptions() {
     let file = await fetch("https://a-moseman.neocities.org/resources/descriptions.txt");
-    let text = await file.text().data;
+    let text = await file.text();
     let descriptions = text.split("\n");
     const choice = Math.floor(Math.random() * descriptions.length);
     setText(descriptions[choice], text);
