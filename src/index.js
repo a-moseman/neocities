@@ -34,6 +34,7 @@ fetchWithFallback("https://a-moseman.neocities.org/resources/blog/index.txt", ".
         .then(postFile => postFile.text())
         .then(postText => {
         const post = document.createElement("div");
+        post.className = "blog_post";
 
         const postLines = postText.trim().split("\n");
 

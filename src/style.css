@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  height: 97%;
+  height: 100%;
   background-color: var(--background);
   color: var(--text);
   font-family: Helvetica;
@@ -55,8 +55,14 @@ body {
 }
 
 .blog {
+  height: 480px;
+  overflow-y: scroll;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+.blog_post {
+  padding-bottom: 32px;
 }
 
 .blog_post_date {
@@ -65,12 +71,6 @@ body {
 
 .blog_post_paragraph {
   padding-bottom: 8px;
-}
-
-.blog.scroll {
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
 }
 
 .left_bar, .right_bar {
