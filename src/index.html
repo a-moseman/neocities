@@ -14,29 +14,27 @@
       <div class="top_stack">
 
         <div class="left_bar">
-          <div class="links">
-            <a href="https://github.com/a-moseman"><img class="logo" src="./resources/github_mark_black.svg"></a>
+            <a href="https://github.com/a-moseman"><img class="logo" src="./resources/github_mark_white.svg"></a>
             <a href="https://www.linkedin.com/in/andrew-moseman-b78b34191/"><img class="logo" src="./resources/linkedin.svg"></a>
             <a href="https://bsky.app/profile/a-moseman.neocities.org">
               <img class="logo" src="./resources/bluesky.svg" />
               </svg>
             </a>
-          </div>
         </div>
 
         <div class="center_bar">
           <div class="title_section">
             <div class="title">Andrew Moseman</div>
             <div class="description"></div>
+
+            <frame class="blog"></frame>
           </div>
 
 
         </div>
 
         <div class="right_bar">
-            <div class="links">
-              <a href="https://a-moseman.github.io/">Portfolio</a>
-            </div>
+              <a class="link" href="https://a-moseman.github.io/">Portfolio</a>
         </div>
 
       </div>
@@ -53,6 +51,7 @@
 <script>
   // DOM elements
   const description = document.querySelector(".description");
+  const blog = document.querySelector(".blog");
 
   fetch("https://a-moseman.neocities.org/resources/descriptions.txt")
     .then(file => file.text())
@@ -63,4 +62,37 @@
       chosen.innerText = descriptions[choice];
       description.appendChild(chosen);
     });
+
+  fetch("https://a-moseman.neocities.org/resources/blog/index.txt")
+    .then(file => file.text())
+    .then(text => {
+      const posts = parseInt(text.trim());
+      for (let i = 1; i <= posts; i++) {
+        fetch(`https://a-moseman.neocities.org/resources/blog/${i}.txt`)
+          .then(postFile => postFile.text())
+          .then(postText => {
+            const post = document.createElement("div");
+
+            const postLines = postText.trim().split("\n");
+
+            const postTitle = document.createElement("div");
+            const postDate = document.createElement("div");
+            postTitle.className = "blog_post_title";
+            postDate.className = "blog_post_date";
+            postTitle.textContent = postLines[0];
+            postDate.textContent = postLines[1];
+            post.appendChild(postTitle);
+            post.appendChild(postDate);
+
+            for (let j = 2; j < postLines.length; j++) {
+              const postParagraph = document.createElement("div");
+              postParagraph.className = "blog_post_paragraph";
+              postParagraph.textContent = postLines[j];
+              post.appendChild(postParagraph);
+            }
+
+            blog.appendChild(post);
+          });
+      }
+  });
 </script>
