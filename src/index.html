@@ -89,7 +89,10 @@
             for (let j = 2; j < postLines.length; j++) {
               const postParagraph = document.createElement("p");
               postParagraph.className = "blog_post_paragraph";
-              postParagraph.textContent = postLines[j];
+              const paragraphText = postLines[j];
+              paragraphText = "&emsp;" + paragraphText; // start each paragraph with a tab
+              paragraphText = paragraphText.replace("\t", "&emsp;") // fix tabs
+              postParagraph.textContent = paragraphText;
               post.appendChild(postParagraph);
             }
 
