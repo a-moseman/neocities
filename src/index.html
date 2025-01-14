@@ -58,7 +58,7 @@
     .then(file => file.text())
     .then(text => {
       const descriptions = text.split("\n");
-      const choice = Math.floor(Math.random() * descriptions.length);
+      const choice = Math.floor(Math.random() * (descriptions.length - 1));
       const chosen = document.createElement("i");
       chosen.innerText = descriptions[choice];
       description.appendChild(chosen);
