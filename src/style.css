@@ -54,6 +54,11 @@ body {
   padding-bottom: 16px;
 }
 
+.blog {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 .blog.scroll {
   width: 100%;
   height: 100%;
