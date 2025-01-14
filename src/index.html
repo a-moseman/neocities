@@ -51,16 +51,20 @@
 </html>
 
 <script>
-  async function getFileText(location) {
-    let file = await fetch(location);
-    return file.text();
+  function setText(element, text) {
+    element.textContent = text;
   }
-
-  let descriptions = getFileText("https://a-moseman.neocities.org/resources/descriptions.txt").split("\n");
 
   // DOM elements
   const description = document.querySelector(".description");
 
-  const choice = Math.floor(Math.random() * descriptions.length);
-  description.textContent = descriptions[choice];
+  async function loadDescriptions() {
+    let file = await fetch("https://a-moseman.neocities.org/resources/descriptions.txt");
+    let text = await file.text().data;
+    let descriptions = text.split("\n");
+    const choice = Math.floor(Math.random() * descriptions.length);
+    setText(descriptions[choice], text);
+  }
+
+  loadDescriptions();
 </script>
