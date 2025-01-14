@@ -59,6 +59,14 @@ body {
   padding-right: 16px;
 }
 
+.blog_date {
+  padding-bottom: 16px;
+}
+
+.blog_paragraph {
+  padding-bottom: 8px;
+}
+
 .blog.scroll {
   width: 100%;
   height: 100%;
