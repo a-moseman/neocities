@@ -58,13 +58,10 @@
   // DOM elements
   const description = document.querySelector(".description");
 
-  async function loadDescriptions() {
-    let file = await fetch("https://a-moseman.neocities.org/resources/descriptions.txt");
-    let text = await file.text();
-    let descriptions = text.split("\n");
-    const choice = Math.floor(Math.random() * descriptions.length);
-    setText(descriptions[choice], text);
-  }
-
-  loadDescriptions();
+  fetch("https://a-moseman.neocities.org/resources/descriptions.txt")
+    .then(file => file.text())
+    .then(text => {
+      const choice = Math.floor(Math.random() * descriptions.length);
+      setText(description, descriptions[choice]);
+    });
 </script>
