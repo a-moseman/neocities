@@ -14,6 +14,7 @@ return fetch(url)
 // DOM elements
 const description = document.querySelector(".description");
 const blog = document.querySelector(".blog");
+const blogCounter = document.querySelector(".blog_counter");
 
 fetchWithFallback("https://a-moseman.neocities.org/resources/descriptions.txt", "./resources/descriptions.txt")
 .then(file => file.text())
@@ -29,6 +30,9 @@ fetchWithFallback("https://a-moseman.neocities.org/resources/blog/index.txt", ".
 .then(file => file.text())
 .then(text => {
     const posts = parseInt(text.trim());
+
+    blogCounter.textContent = `total posts: ${posts}`;
+
     for (let i = 1; i <= posts; i++) {
     fetchWithFallback(`https://a-moseman.neocities.org/resources/blog/${i}.txt`, `./resources/blog/${i}.txt`)
         .then(postFile => postFile.text())
