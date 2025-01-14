@@ -50,6 +50,16 @@ body {
   font-size: 14px;
 }
 
+.title_section {
+  padding-bottom: 16px;
+}
+
+.blog.scroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
 .left_bar, .right_bar {
   display: flex;
   flex-direction: column;
