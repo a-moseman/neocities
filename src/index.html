@@ -57,8 +57,8 @@
   fetch("https://a-moseman.neocities.org/resources/descriptions.txt")
     .then(file => file.text())
     .then(text => {
-      const descriptions = text.split("\n");
-      const choice = Math.floor(Math.random() * (descriptions.length - 1));
+      const descriptions = text.trim().split("\n");
+      const choice = Math.floor(Math.random() * (descriptions.length));
       const chosen = document.createElement("i");
       chosen.innerText = descriptions[choice];
       description.appendChild(chosen);
