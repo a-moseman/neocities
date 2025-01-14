@@ -52,7 +52,7 @@
 
 <script>
   async function getFileText(location) {
-    let file = await fetch("./resources/descriptions.txt");
+    let file = await fetch(location);
     return file.text();
   }
 
