@@ -91,7 +91,7 @@
               if (paragraphText === "") {
                 continue;
               }
-              const postParagraph = document.createElement("p");
+              const postParagraph = document.createElement("div");
               postParagraph.className = "blog_post_paragraph";
               paragraphText = " &emsp; " + paragraphText; // start each paragraph with a tab
               postParagraph.textContent = paragraphText;
