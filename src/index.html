@@ -49,3 +49,18 @@
 
   </body>
 </html>
+
+<script>
+  async function getFileText(location) {
+    let file = await fetch("./resources/descriptions.txt");
+    return file.text();
+  }
+
+  let descriptions = getFileText("https://a-moseman.neocities.org/resources/descriptions.txt").split("\n");
+
+  // DOM elements
+  const description = document.querySelector(".description");
+
+  const choice = Math.floor(Math.random() * descriptions.length);
+  description.textContent = descriptions[choice];
+</script>
