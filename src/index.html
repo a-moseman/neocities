@@ -81,8 +81,8 @@
             const postDate = document.createElement("div");
             postTitle.className = "blog_post_title";
             postDate.className = "blog_post_date";
-            postTitle.innerText = postLines[0];
-            postDate.innerText = postLines[1];
+            postTitle.textContent = postLines[0];
+            postDate.textContent = postLines[1];
             post.appendChild(postTitle);
             post.appendChild(postDate);
 
@@ -93,8 +93,8 @@
               }
               const postParagraph = document.createElement("p");
               postParagraph.className = "blog_post_paragraph";
-              paragraphText = "&emsp;" + paragraphText; // start each paragraph with a tab
-              postParagraph.innerText = paragraphText;
+              paragraphText = " &emsp; " + paragraphText; // start each paragraph with a tab
+              postParagraph.textContent = paragraphText;
               post.appendChild(postParagraph);
             }
 
