@@ -1,0 +1,23 @@
+html {
+    background: #C00000;
+}
+
+img {
+    width: 192px;
+}
+
+.top_bar {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 32px;
+}
+
+.center_bar {
+    padding: 16px;
+}
