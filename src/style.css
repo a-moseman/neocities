@@ -34,6 +34,7 @@ body {
 
 .center_bar {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
@@ -76,7 +77,6 @@ body {
 .blog {
   overflow-y: scroll;
   max-height: 540px;
-
   background: var(--blog);
   border: solid;
   border-radius: 16px;
@@ -110,6 +110,7 @@ body {
   border-radius: 8px;
   border-color: var(--border);
   background: var(--sidebars);
+  height: fit-content;
 }
 
 .link {
