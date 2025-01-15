@@ -123,6 +123,10 @@ body {
   padding-bottom: 8px;
 }
 
+.logo:hover {
+  transform: scale(1.2);
+}
+
 .bottom_stack {
   margin-top: auto;
   display: flex;
