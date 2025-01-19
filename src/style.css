@@ -135,6 +135,13 @@ body {
   padding-bottom: 8px;
 }
 
+.left_bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
 
 .left_top_bar, .left_bottom_bar {
   display: flex;
