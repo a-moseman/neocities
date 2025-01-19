@@ -6,7 +6,7 @@ const SAVE_PERIOD_MS = 10_000;
 let canClick = true;
 let score = 0;
 let scoreSaveData = localStorage.getItem("score");
-if (scoreSaveData !== "") {
+if (scoreSaveData != null) {
     score = parseInt(scoreSaveData);
 }
 
