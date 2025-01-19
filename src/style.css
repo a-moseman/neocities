@@ -1,5 +1,15 @@
 /* ctrl + shift + r to reset cache to reload css */
 
+@font-face {
+  font-family: TerminalGrotesque;
+  src: url("./resources/fonts/terminal-grotesque.ttf");
+}
+
+@font-face {
+  font-family: TerminalGrotesqueOpen;
+  src: url("./resources/fonts/terminal-grotesque_open.otf");
+}
+
 :root {
   --text: #FFE0F0;
   --background: #110023;
@@ -8,6 +18,7 @@
   --blog: #D569B0;
   --blog_text: #110023;
   --blog_post: #FFE0F0;
+  --font: "TerminalGrotesque";
 }
 
 html {
@@ -18,7 +29,7 @@ body {
   height: 100%;
   background-color: var(--background);
   color: var(--text);
-  font-family: Helvetica;
+  font-family: var(--font);
 }
 
 .main {
