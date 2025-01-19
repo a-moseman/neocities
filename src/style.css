@@ -30,6 +30,7 @@ body {
   background-color: var(--background);
   color: var(--text);
   font-family: var(--font);
+  padding: 32px;
 }
 
 .main {
@@ -134,9 +135,6 @@ body {
   padding-bottom: 8px;
 }
 
-.left_bar {
-  margin-left: 16px;
-}
 
 .left_top_bar, .left_bottom_bar {
   display: flex;
@@ -178,5 +176,4 @@ body {
 
 #chattable {
   height: 480px;
-  margin-right: 16px;
 }
