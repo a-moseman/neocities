@@ -6,8 +6,9 @@ const SAVE_PERIOD_MS = 10_000;
 let canClick = true;
 let score = 0;
 let scoreSaveData = localStorage.getItem("score");
-score = parseInt(scoreSaveData);
-
+if (scoreSaveData !== "") {
+    score = parseInt(scoreSaveData);
+}
 
 const counterElement = document.getElementById("counter");
 const imageElement = document.getElementById("image");
