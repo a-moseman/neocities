@@ -100,7 +100,11 @@ body {
   padding-bottom: 8px;
 }
 
-.left_bar, .right_bar {
+.left_bar {
+  margin-left: 16px;
+}
+
+.left_top_bar, .left_bottom_bar {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,6 +115,7 @@ body {
   border-color: var(--border);
   background: var(--sidebars);
   height: fit-content;
+  margin-bottom: 16px;
 }
 
 .link {
