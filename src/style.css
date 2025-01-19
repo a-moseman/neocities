@@ -28,6 +28,8 @@ html {
 body {
   height: 100%;
   background-color: var(--background);
+  background-image: url("./resources/background_tile.png");
+  background-repeat: repeat;
   color: var(--text);
   font-family: var(--font);
   padding: 32px;
