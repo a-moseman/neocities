@@ -141,3 +141,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+#chattable {
+  height: 480px;
+  margin-right: 16px;
+}
