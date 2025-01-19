@@ -1,3 +1,8 @@
+// DOM elements
+const description = document.querySelector(".description");
+const blog = document.querySelector(".blog");
+const blogCounter = document.querySelector(".blog_counter");
+
 async function fetchWithFallback(url, fallback) {
 return fetch(url)
     .then(response => {
@@ -11,20 +16,53 @@ return fetch(url)
     });
 }
 
-// DOM elements
-const description = document.querySelector(".description");
-const blog = document.querySelector(".blog");
-const blogCounter = document.querySelector(".blog_counter");
+function randomizeDescription() {
+    fetchWithFallback("https://a-moseman.neocities.org/resources/descriptions.txt", "./resources/descriptions.txt")
+        .then(file => file.text())
+        .then(text => {
+            const descriptions = text.trim().split("\n");
+            const choice = Math.floor(Math.random() * (descriptions.length));
+            const chosen = document.createElement("i");
+            description.textContent = descriptions[choice];
+        });
+}
 
-fetchWithFallback("https://a-moseman.neocities.org/resources/descriptions.txt", "./resources/descriptions.txt")
-.then(file => file.text())
-.then(text => {
-    const descriptions = text.trim().split("\n");
-    const choice = Math.floor(Math.random() * (descriptions.length));
-    const chosen = document.createElement("i");
-    chosen.innerText = descriptions[choice];
-    description.appendChild(chosen);
-});
+
+function descriptionFadeIn() {
+    const keyframes = [
+        { transform: 'translateY(10px)', opacity: '0' },
+        { transform: 'translateY(0px)', opacity: '1' }
+    ];
+    const options = {
+        duration: 1000,
+        iterations: 1
+    };
+    description.animate(keyframes, options);
+}
+
+function descriptionFadeOutAndIn() {
+    const keyframes = [
+        { transform: 'translateY(0px)', opacity: '1'},
+        { transform: 'translateY(-10px)', opacity: '0' },
+        { transform: 'translateY(10px)', opacity: '0' },
+        { transform: 'translateY(0px)', opacity: '1' }
+    ];
+    const options = {
+        duration: 2000,
+        iterations: 1
+    };
+    description.animate(keyframes, options);
+}
+
+function onDescriptionClick() {
+    setTimeout(randomizeDescription, 750);
+    descriptionFadeOutAndIn();
+}
+
+description.style.position = "relative";
+description.onclick = onDescriptionClick;
+randomizeDescription();
+descriptionFadeIn();
 
 fetchWithFallback("https://a-moseman.neocities.org/resources/blog/index.txt", "./resources/blog/index.txt")
 .then(file => file.text())
