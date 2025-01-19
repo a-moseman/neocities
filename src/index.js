@@ -64,6 +64,8 @@ description.onclick = onDescriptionClick;
 randomizeDescription();
 descriptionFadeIn();
 
+setInterval(onDescriptionClick, 10_000);
+
 fetchWithFallback("https://a-moseman.neocities.org/resources/blog/index.txt", "./resources/blog/index.txt")
 .then(file => file.text())
 .then(text => {
