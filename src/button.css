@@ -15,3 +15,7 @@ button {
     background: none;
     width: fit-content;
 }
+
+#counter {
+    opacity: 0;
+}

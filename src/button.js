@@ -33,12 +33,14 @@ function shake() {
     let amp = 5;
     let step = 0;
 
+
     for (step = 0; step < steps; step++) {
         setTimeout(function() {
             let xPos = Math.floor(Math.random() * amp - amp / 2);
             let yPos = Math.floor(Math.random() * amp - amp / 2);
             counterElement.style.left = `${xPos}px`;
             counterElement.style.top = `${yPos}px`;
+            counterElement.style.opacity = "1";
 
             counterElement.style.transition = `${delta}ms`;
         }, delta * step);
@@ -46,8 +48,15 @@ function shake() {
 
     setTimeout(function() {
         counterElement.style.left = "0px";
+        counterElement.style.top = "0px";
         counterElement.style.transition = `${delta}ms`;
+
     }, step * delta);
+
+    setTimeout(function() {
+        counterElement.style.opacity = "0";
+        counterElement.style.transition = `${delta * 100}ms`;
+    }, (step + 1) * delta);
 }
 
 function click() {
