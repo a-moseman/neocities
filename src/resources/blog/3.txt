@@ -1,0 +1,5 @@
+Disorganized.
+19 January 2025
+I've added a chat and guest book, in addition to improving style of the home page. It's pretty bland, but I've made my own 88x31 button for my website. Eventually, I'll redesign it. The other pages have had practically nothing done with them CSS-wise, so that's something else on my to-do list. Now that I think of it, a to-do list might be a nice addition to the home page.
+Before I add too much though, I need to refactor how the website directory is organized. For starters, I need to put each page's files, its .html, .css, and .js files, into a directory just for it. The resources directory probably shouldn't be in the src directory, so I'll need make them sibling to one-another and change the GitHub action to deploy from an outer directory. Finally, I should decompose the JavaScript files into more modular parts.
+-Andrew
