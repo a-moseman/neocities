@@ -110,7 +110,7 @@ fetchWithFallback("https://a-moseman.neocities.org/resources/blog/index.txt", ".
 
 
 // site info
-fetchWithFallback("https://a-moseman.neocities.org/resources/site-info", "./resources/site-info")
+fetchWithFallback("https://a-moseman.neocities.org/resources/site-info.txt", "./resources/site-info.txt")
     .then(site_info_file => site_info_file.text())
     .then(site_info_text => {
         const json = JSON.parse(site_info_text);
