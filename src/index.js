@@ -107,3 +107,35 @@ fetchWithFallback("https://a-moseman.neocities.org/resources/blog/index.txt", ".
         });
     }
 });
+
+
+// site info
+fetchWithFallback("https://a-moseman.neocities.org/resources/site-info", "./resources/site-info")
+    .then(site_info_file => site_info_file.text())
+    .then(site_info_text => {
+        const json = JSON.parse(site_info_text);
+        const info = json["info"];
+
+        const created = new Date(info["created_at"]);
+        const updated = new Date(info["last_updated"]);
+        const hits = info["hits"];
+
+        const current = Date.now();
+        const milliseconds = Math.abs(created - current);
+
+        const days = milliseconds / 1000 / 60/ 60 / 24;
+        const daysRounded = Math.floor(days);
+        const hours = (days - daysRounded) * 24;
+        const hoursRounded = Math.floor(hours);
+
+        const site_info = document.getElementById("site-info");
+
+        const daysElement = document.createElement("div");
+        daysElement.textContent = `- site age: ${daysRounded} days ${hoursRounded} hours`;
+
+        const hitsElement = document.createElement("div");
+        hitsElement.textContent = `- hits: ${hits}`;
+
+        site_info.appendChild(daysElement);
+        site_info.appendChild(hitsElement);
+    });
